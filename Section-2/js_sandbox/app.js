@@ -1,62 +1,71 @@
-const firstName = 'William';
-const lastName = 'Johnson';
-const age = 36;
-const str = 'Hello there my name is Brad';
-const tags = 'web design, web development, programming';
+// // FOR LOOP
 
-let val;
+// for (let i = 0; i <= 10; i++) {
+//   if (i === 2) {
+//     console.log('2 is my favorite number');
+//     continue;
+//   }
 
-val = firstName + lastName;
+//   if (i === 5) {
+//     console.log('Stop the loop');
+//     break;
+//   }
 
-// Concatenation
+//   console.log('Number ' + i);
+// }
 
-val = firstName + ' ' + lastName;
+// WHILE LOOP
 
-// Append
-val = 'Brad ';
-val += 'Traversy';
+// let i = 0;
 
-val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+// while (i < 10) {
+//   console.log('Number ' + i);
+//   i++;
+// }
 
-// Escaping
-val = "That's awesome, I can't wait";
+// DO WHILE
 
-// Length
-val = firstName.length;
+// let i = 100;
 
-// concat
-val = firstName.concat(' ', lastName);
+// do {
+//   console.log('Number ' + i);
+//   i++;
+// } while (i < 10);
 
-// Change case
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
+// LOOP THROUGH ARRAY
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
-val = firstName[2];
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
 
-// indexOf()
-val = firstName.indexOf('l');
-val = firstName.lastIndexOf('l');
+// FOREACH
+// cars.forEach(function(car, index, array) {
+//   console.log(`${index} : ${car}`);
+//   console.log(array);
+// });
 
-// charAt()
-val = firstName.charAt('2');
-// Get last char
-val = firstName.charAt(firstName.length - 1);
+// // MAP
+// const users = [
+//   { id: 1, name: 'John' },
+//   { id: 2, name: 'Sarah' },
+//   { id: 3, name: 'Karen' },
+//   { id: 4, name: 'Steve' }
+// ];
 
-// substring()
-val = firstName.substring(0, 4);
+// const ids = users.map(function(user) {
+//   return user.id;
+// });
 
-// slice()
-val = firstName.slice(0, 4);
-val = firstName.slice(-3);
+// console.log(ids);
 
-// split()
-val = str.split(' ');
-val = tags.split(',');
+// FOR IN LOOP
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 40
+// };
 
-// replace()
-val = str.replace('Brad', 'Jack');
-
-// includes()
-val = str.includes('foo');
-
-console.log(val);
+// for (let x in user) {
+//   console.log(`${x} : ${user[x]}`);
+// }
