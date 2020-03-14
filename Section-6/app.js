@@ -8,6 +8,7 @@ function Book(title, author, isbn) {
 // UI Constructor
 function UI() {}
 
+// Add Book To List
 UI.prototype.addBookToList = function(book) {
   const list = document.getElementById('book-list');
   // Create tr element
