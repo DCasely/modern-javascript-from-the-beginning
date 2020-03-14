@@ -1,4 +1,4 @@
-// PRIMITIVE
+// PRIMITIVE TYPES
 
 // String
 const name = 'John Doe';
@@ -13,7 +13,8 @@ let test;
 // Symbol
 const sym = Symbol();
 
-// REFERENCE TYPE
+// REFERENCE TYPES
+
 // Array
 const hobbies = ['movies', 'music'];
 // Object literal
