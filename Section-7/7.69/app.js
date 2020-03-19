@@ -1,32 +1,46 @@
-const http = new EasyHTTP();
+// const sayHello = function() {
+//   console.log('Hello');
+// };
 
-// Get users
-// const users = http
-//   .get('https://jsonplaceholder.typicode.com/users')
-//   .then(data => console.log(data))
-//   .catch(err => console.log(err));
+// const sayHello = () => {
+//   console.log('Hello');
+// };
 
-// User Data
-const data = {
-  name: 'John Doe',
-  username: 'johndoe',
-  email: 'jdoe@gmail.com'
-};
+// One line function does not need braces
+// const sayHello = () => console.log('Hello');
 
-// Create User
-// http
-//   .post('https://jsonplaceholder.typicode.com/users', data)
-//   .then(data => console.log(data))
-//   .catch(err => console.log(err));
+// One line returns
+// const sayHello = () => 'Hello';
 
-// Update User
-// http
-//   .put('https://jsonplaceholder.typicode.com/users/2', data)
-//   .then(data => console.log(data))
-//   .catch(err => console.log(err));
+// Same as above
+// const sayHello = function() {
+//   return 'Hello';
+// };
 
-// Delete User
-http
-  .delete('https://jsonplaceholder.typicode.com/users/2')
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
+// Return object
+// const sayHello = () => ({ msg: 'Hello' });
+
+// Single param does not need parenthesis
+// const sayHello = name => console.log(`Hello ${name}`);
+
+// Multiple params need parenthesis
+// const sayHello = (firstName, lastName) =>
+//   console.log(`Hello ${firstName} ${lastName}`);
+
+// sayHello('Davin', 'Casely');
+
+const users = ['Nathan', 'John', 'William'];
+
+// const nameLengths = users.map(function(name) {
+//   return name.length;
+// });
+
+// Shorter
+// const nameLengths = users.map(name => {
+//   return name.length;
+// });
+
+// Shortest
+const nameLengths = users.map(name => name.length);
+
+console.log(nameLengths);
