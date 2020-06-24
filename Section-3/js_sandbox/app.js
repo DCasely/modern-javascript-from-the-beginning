@@ -147,59 +147,63 @@
 // 26. TRAVERSING THE DOM
 // ==========================================
 
-// let val;
+let val;
 
-// const list = document.querySelector('ul.collection');
-// const listItem = document.querySelector('li.collection-item:first-child');
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
 
-// val = listItem;
-// val = list;
+val = listItem;
+val = list;
 
-// // Get child nodes
-// val = list.childNodes;
-// val = list.childNodes[0];
-// val = list.childNodes[0].nodeName;
-// val = list.childNodes[3].nodeType;
+// Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[1].nodeType;
+val = list.childNodes[3].nodeType;
 
-// // 1 - Element
-// // 2 - Attribute (deprecated)
-// // 3 - Text node
-// // 8 - Comment
-// // 9 - Document itself
-// // 10 - Doctype
+// 1 - ELEMENT
+// 2 - ATTRIBUTE (DEPRECATED)
+// 3 - TEXT NODE
+// 8 - COMMENT
+// 9 - DOCUMENT ITSELF
+// 10 - DOCTYPE
 
-// // Get children element nodes
-// val = list.children;
-// val = list.children[1];
-// list.children[1].textContent = 'Hello';
-// // Children of children
-// list.children[3].children[0].id = 'test=link';
-// val = list.children[3].children[0];
+// Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
 
-// // First child
-// val = list.firstChild;
-// val = list.firstElementChild;
+// Children of children
+val = list.children[3].children;
+list.children[3].children.id = 'test-link';
 
-// // Last child
-// val = list.lastChild;
-// val = list.lastElementChild;
+// First child
+val = list.firstChild;
+val = list.firstElementChild;
 
-// // Count child elements
-// val = list.childElementCount;
+// Last child
+val = list.lastChild;
+val = list.lastElementChild;
 
-// // Get parent node
-// val = listItem.parentNode;
-// val = listItem.parentElement;
-// val = listItem.parentElement.parentElement;
+// Count child elements
+val = list.childElementCount;
 
-// // Get next sibling
-// val = listItem.nextSibling;
-// val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
 
-// // Get previous sibling
-// val = listItem.previousSibling;
-// val = listItem.previousElementSibling;
-// console.log(val);
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+
+// Get prev sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+
+console.log(val);
 
 // ==========================================
 // 27. Creating Elements
