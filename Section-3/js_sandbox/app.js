@@ -2,58 +2,60 @@
 // 23. EXAMINING THE DOCUMENT OBJECT
 // ======================================
 
-let val;
+// let val;
 
-val = document;
-val = document.all;
-val = document.all[0];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// val = document;
+// val = document.all;
+// val = document.all[0];
+// val = document.all.length;
+// val = document.head;
+// val = document.body;
+// val = document.doctype;
+// val = document.domain;
+// val = document.URL;
+// val = document.characterSet;
+// val = document.contentType;
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// val = document.forms;
+// val = document.forms[0];
+// val = document.forms[0].id;
+// val = document.forms[0].method;
+// val = document.forms[0].action;
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].href;
-val = document.links[0].classList;
-val = document.links[0].classList[0];
+// val = document.links;
+// val = document.links[0];
+// val = document.links[0].id;
+// val = document.links[0].className;
+// val = document.links[0].href;
+// val = document.links[0].classList;
+// val = document.links[0].classList[0];
 
-val = document.images;
+// val = document.images;
 
-val = document.scripts;
-val = document.scripts[0];
-val = document.scripts[2].getAttribute('src');
+// val = document.scripts;
+// val = document.scripts[0];
+// val = document.scripts[2].getAttribute('src');
 
-const scripts = document.scripts;
-const scriptsArray = [...scripts];
+// const scripts = document.scripts;
+// const scriptsArray = [...scripts];
 
-scriptsArray.map((scipt) => console.log(scipt.getAttribute('src')));
+// scriptsArray.map((scipt) => console.log(scipt.getAttribute('src')));
 
-console.log(val);
+// console.log(val);
 
 // ======================================
 // 24. DOM SELECTORS FOR SINGLE ELEMENTS
 // ======================================
 
-// // document.getElementById()
+// let selector = document.getElementById('task-title');
 
-// console.log(document.getElementById('task-title'));
+// // document.getElementById()
+// const taskTitle = document.getElementById('task-title');
 
 // // Get things from the element
-// console.log(document.getElementById('task-title').id);
-// console.log(document.getElementById('task-title').className);
+// document.getElementById('task-title');
+// document.getElementById('task-title').id;
+// document.getElementById('task-title').className;
 
 // const taskTitle = document.getElementById('task-title');
 
@@ -65,23 +67,24 @@ console.log(val);
 
 // // Change content
 // taskTitle.textContent = 'Task List';
-// taskTitle.innerText = 'My Tasks';
-// taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+// taskTitle.innerText = 'My List';
+// taskTitle.innerHTML = '<span style="color: green">Task List</span>';
 
 // document.querySelector()
 
-// console.log(document.querySelector('#task-title'));
-// console.log(document.querySelector('.card-title'));
-// console.log(document.querySelector('h5'));
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
 
-// document.querySelector('li').style.color = 'red';
-// document.querySelector('ul li').style.color = 'blue';
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'blue';
+document.querySelector('li:last-child').style.color = 'green';
+document.querySelector('li:nth-child(3)').style.color = 'red';
+document.querySelector('li:nth-child(4)').textContent = 'Hello World';
 
-// document.querySelector('li:last-child').style.color = 'red';
-// document.querySelector('li:nth-child(3)').style.color = 'orange';
-// document.querySelector('li:nth-child(4)').textContent = 'Hello World';
-// document.querySelector('li:nth-child(odd)').style.background = '#ccc';
-// document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+// These will not work as intended because these are single element selectors, so only the first odd or even will be effected
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
 
 // ==========================================
 // 25. DOM SELECTORS FOR MULTIPLE ELEMENTS
