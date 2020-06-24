@@ -354,36 +354,40 @@
 // 30. MOUSE EVENTS
 // ==========================================
 
-// const clearBtn = document.querySelector('.clear-tasks');
-// const card = document.querySelector('.card');
-// const heading = document.querySelector('h5');
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
 
-// Click
+// // Click
 // clearBtn.addEventListener('click', runEvent);
-// Doubleclick
+// // Doubleclick
 // clearBtn.addEventListener('dblclick', runEvent);
-// Mousedown
+// // Mousedown
 // clearBtn.addEventListener('mousedown', runEvent);
-// Mouseup
+// // Mouseup
 // clearBtn.addEventListener('mouseup', runEvent);
-// Mouseenter
+// // Mouseenter
 // card.addEventListener('mouseenter', runEvent);
-// Mouseleave
+// // Mouseleave
 // card.addEventListener('mouseleave', runEvent);
-// Mouseeover
-// card.addEventListener('mouseeover', runEvent);
-// Mouseout
+// // Mouseover
+// card.addEventListener('mouseover', runEvent);
+// // Mouseout
 // card.addEventListener('mouseout', runEvent);
-// card.addEventListener('mousemove', runEvent);
+// Mousemove
+card.addEventListener('mousemove', runEvent);
 
-// // Event Handler
-// function runEvent(e) {
-//   console.log(`EVENT TYPE: ${e.type}`);
+// Event Handler
+function runEvent(e) {
+  //   const cordY = e.clientY;
+  //   const cordX = e.clientX;
+  //   heading.innerText = `Y:${cordY} X:${cordX}`;
+  //   document.body.style.backgroundColor = `#${cordY}`;
 
-//   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetX}`;
 
-//   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
-// }
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
 
 // ==========================================
 // 31. KEYBOARD & INPUT EVENTS
