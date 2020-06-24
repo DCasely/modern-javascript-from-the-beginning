@@ -72,19 +72,19 @@
 
 // document.querySelector()
 
-console.log(document.querySelector('#task-title'));
-console.log(document.querySelector('.card-title'));
-console.log(document.querySelector('h5'));
+// console.log(document.querySelector('#task-title'));
+// console.log(document.querySelector('.card-title'));
+// console.log(document.querySelector('h5'));
 
-document.querySelector('li').style.color = 'red';
-document.querySelector('ul li').style.color = 'blue';
-document.querySelector('li:last-child').style.color = 'green';
-document.querySelector('li:nth-child(3)').style.color = 'red';
-document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+// document.querySelector('li').style.color = 'red';
+// document.querySelector('ul li').style.color = 'blue';
+// document.querySelector('li:last-child').style.color = 'green';
+// document.querySelector('li:nth-child(3)').style.color = 'red';
+// document.querySelector('li:nth-child(4)').textContent = 'Hello World';
 
-// These will not work as intended because these are single element selectors, so only the first odd or even will be effected
-document.querySelector('li:nth-child(odd)').style.background = '#ccc';
-document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+// // These will not work as intended because these are single element selectors, so only the first odd or even will be effected
+// document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+// document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
 
 // ==========================================
 // 25. DOM SELECTORS FOR MULTIPLE ELEMENTS
@@ -104,8 +104,9 @@ document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
 
 // console.log(listItems);
 
-// document.getElementsByTagName
-// let lis = document.getElementsByTagName('li');
+// // document.getElementsByTagName
+
+// const lis = document.getElementsByTagName('li');
 // console.log(lis);
 // console.log(lis[0]);
 // lis[0].style.color = 'red';
@@ -113,33 +114,31 @@ document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
 
 // // Convert HTML Collection into array
 
-// lis = Array.from(lis);
+// const lisArray = [...lis];
 
-// lis.reverse();
+// // lisArray.reverse();
 
-// lis.forEach(function(li, index) {
-//   console.log(li.className);
-//   li.textContent = `${index}: Hello`;
-// });
+// lisArray.map((li) => console.log(li));
+// lisArray.map((li) => console.log(li.className));
+// lisArray.map((li) => (li.textContent = 'Hello'));
+// lisArray.map((li, index) => (li.textContent = `${index + 1}: Hello`));
 
-// console.log(lis);
+// console.log(lisArray);
 
-// // document.querySelectorAll
+// document.querySelectorAll
+
 // const items = document.querySelectorAll('ul.collection li.collection-item');
 
-// items.forEach(function(item, index) {
-//   item.textContent = `${index}: Hello`;
-// });
+// items.forEach((item, index) => (item.textContent = `${index}: Yes`));
 
 // const liOdd = document.querySelectorAll('li:nth-child(odd)');
 // const liEven = document.querySelectorAll('li:nth-child(even)');
 
-// liOdd.forEach(function(li, index) {
-//   li.style.background = '#ccc';
-// });
+// liOdd.forEach((li) => (li.style.color = 'red'));
+// liEven.forEach((li) => (li.style.color = 'green'));
 
 // for (let i = 0; i < liEven.length; i++) {
-//   liEven[i].style.background = '#f4f4f4';
+//   liEven[i].style.background = 'lightgray';
 // }
 
 // console.log(items);
