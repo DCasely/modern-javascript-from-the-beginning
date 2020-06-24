@@ -307,16 +307,19 @@
 // 29. EVENT LISTENERS AND THE EVENT OBJECT
 // ==========================================
 
-// document.querySelector('.clear-tasks').addEventListener('click', function(e) {
-//   console.log('Hello World');
+// const clearTask = document.querySelector('.clear-tasks');
 
-//   // e.preventDefault();
-// });
+// // clearTask.addEventListener('click', function (e) {
+// //   console.log('I was CLICKED!');
 
-// document.querySelector('.clear-tasks').addEventListener('click', onClick);
+// //   // Prevents the default behavior of redirecting page
+// //   e.preventDefault();
+// // });
+
+// clearTask.addEventListener('click', onClick);
 
 // function onClick(e) {
-//   // console.log('Clicked');
+//   console.log('I was CLICKED');
 
 //   let val;
 
@@ -328,17 +331,19 @@
 //   val = e.target.className;
 //   val = e.target.classList;
 
+//   e.target.innerText = 'Preeminence';
+
 //   // Event type
 //   val = e.type;
 
 //   // Timestamp
 //   val = e.timeStamp;
 
-//   // Coordinates event relative to the window
+//   // Coords event relative to the window
 //   val = e.clientY;
 //   val = e.clientX;
 
-//   // Coordinates event relative to the window
+//   // Coords event relative to the element
 //   val = e.offsetY;
 //   val = e.offsetX;
 
