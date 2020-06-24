@@ -354,40 +354,40 @@
 // 30. MOUSE EVENTS
 // ==========================================
 
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
-const heading = document.querySelector('h5');
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
 
-// // Click
-// clearBtn.addEventListener('click', runEvent);
-// // Doubleclick
-// clearBtn.addEventListener('dblclick', runEvent);
-// // Mousedown
-// clearBtn.addEventListener('mousedown', runEvent);
-// // Mouseup
-// clearBtn.addEventListener('mouseup', runEvent);
-// // Mouseenter
-// card.addEventListener('mouseenter', runEvent);
-// // Mouseleave
-// card.addEventListener('mouseleave', runEvent);
-// // Mouseover
-// card.addEventListener('mouseover', runEvent);
-// // Mouseout
-// card.addEventListener('mouseout', runEvent);
-// Mousemove
-card.addEventListener('mousemove', runEvent);
+// // // Click
+// // clearBtn.addEventListener('click', runEvent);
+// // // Doubleclick
+// // clearBtn.addEventListener('dblclick', runEvent);
+// // // Mousedown
+// // clearBtn.addEventListener('mousedown', runEvent);
+// // // Mouseup
+// // clearBtn.addEventListener('mouseup', runEvent);
+// // // Mouseenter
+// // card.addEventListener('mouseenter', runEvent);
+// // // Mouseleave
+// // card.addEventListener('mouseleave', runEvent);
+// // // Mouseover
+// // card.addEventListener('mouseover', runEvent);
+// // // Mouseout
+// // card.addEventListener('mouseout', runEvent);
+// // Mousemove
+// card.addEventListener('mousemove', runEvent);
 
-// Event Handler
-function runEvent(e) {
-  //   const cordY = e.clientY;
-  //   const cordX = e.clientX;
-  //   heading.innerText = `Y:${cordY} X:${cordX}`;
-  //   document.body.style.backgroundColor = `#${cordY}`;
+// // Event Handler
+// function runEvent(e) {
+//   //   const cordY = e.clientY;
+//   //   const cordX = e.clientX;
+//   //   heading.innerText = `Y:${cordY} X:${cordX}`;
+//   //   document.body.style.backgroundColor = `#${cordY}`;
 
-  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetX}`;
+//   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetX}`;
 
-  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
-}
+//   document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+// }
 
 // ==========================================
 // 31. KEYBOARD & INPUT EVENTS
@@ -398,40 +398,41 @@ function runEvent(e) {
 // const heading = document.querySelector('h5');
 // const select = document.querySelector('select');
 
-// Clear input
-// taskInput.value = '';
+// // form.addEventListener('submit', runEvent);
 
-// form.addEventListener('submit', runEvent);
-
-// Keydown
-// taskInput.addEventListener('keydown', runEvent);
-// Keyup
-// taskInput.addEventListener('keyup', runEvent);
-// Keypress
-// taskInput.addEventListener('keypress', runEvent);
-// Focus
-// taskInput.addEventListener('focus', runEvent);
-// Blur
-// taskInput.addEventListener('blur', runEvent);
-// Cut
-// taskInput.addEventListener('cut', runEvent);
-// Paste
-// taskInput.addEventListener('paste', runEvent);
-// Input
-// taskInput.addEventListener('input', runEvent);
-// Change
+// // Keydown
+// // taskInput.addEventListener('keydown', runEvent);
+// // Keyup
+// // taskInput.addEventListener('keyup', runEvent);
+// // Keypress
+// // taskInput.addEventListener('keypress', runEvent);
+// // Focus
+// // taskInput.addEventListener('focus', runEvent);
+// // Blur (opposite of Focus)
+// // taskInput.addEventListener('blur', runEvent);
+// // Cut
+// // taskInput.addEventListener('cut', runEvent);
+// // Paste
+// // taskInput.addEventListener('paste', runEvent);
+// // Copy
+// // taskInput.addEventListener('copy', runEvent);
+// // Input (any input event)
+// // taskInput.addEventListener('input', runEvent);
+// // Change
 // select.addEventListener('change', runEvent);
 
 // function runEvent(e) {
 //   console.log(`EVENT TYPE: ${e.type}`);
+//   console.log(e.target.value);
 
-//   // console.log(e.target.value);
+//   //   heading.innerText = e.target.value;
 
-//   // heading.innerText = e.target.value;
-//   // Get input value
-//   // console.log(taskInput.value);
+//   //   // Get input value
+//   //   console.log(taskInput.value);
 
-//   // e.preventDefault();
+//   //   // Clear Input
+//   //   taskInput.value = '';
+//   //   e.preventDefault();
 // }
 
 // ==========================================
