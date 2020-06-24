@@ -209,56 +209,60 @@
 // 27. Creating Elements
 // ==========================================
 
-// Create element
+// // Create element
 
-const li = document.createElement('li');
+// const li = document.createElement('li');
 
-// Add class
-li.className = 'collection-item';
+// // Add class
+// li.className = 'collection-item';
 
-// Add id
-li.id = 'new-item';
+// // Add id
+// li.id = 'new-item';
 
-// Add attribute
-li.setAttribute('title', 'New Item');
+// // Add attribute
+// li.setAttribute('title', 'New Item');
 
-// Create text node and append
-li.appendChild(document.createTextNode('This is the Text Node'));
+// // Create text node and append
+// li.appendChild(document.createTextNode('This is the Text Node'));
 
-// Append li as child to ul
-document.querySelector('ul.collection').appendChild(li);
+// // Append li as child to ul
+// document.querySelector('ul.collection').appendChild(li);
 
-// Create new link element
-const link = document.createElement('a');
+// // Create new link element
+// const link = document.createElement('a');
 
-// Add href
-link.href = '#';
-// Add classes
-link.className = 'delete-item secondary-content';
-// Add icon html
-link.innerHTML = `<i class="fa fa-remove"></i>`;
+// // Add href
+// link.href = '#';
+// // Add classes
+// link.className = 'delete-item secondary-content';
+// // Add icon html
+// link.innerHTML = `<i class="fa fa-remove"></i>`;
 
-// Append link into li
-li.appendChild(link);
+// // Append link into li
+// li.appendChild(link);
 
-// Append li as child to ul
-document.querySelector('ul.collection').appendChild(li);
+// // Append li as child to ul
+// document.querySelector('ul.collection').appendChild(li);
 
-console.log(li);
+// console.log(li);
 
 // ==========================================
 // 28. REMOVING & REPLACING ELEMENTS
 // ==========================================
 
+// // REPLACE ELEMENT
+
 // // Create Element
 // const newHeading = document.createElement('h2');
 // // Add id
 // newHeading.id = 'task-title';
-// // New text node
-// newHeading.appendChild(document.createTextNode('Task List'));
+// // New Text node
+// newHeading.appendChild(document.createTextNode('Task-List'));
+// // Alternative to Adding a text node
+// // newHeading.textContent = 'Task-List';
 
 // // Get the old heading
-// const oldHeading = document.getElementById('task-title');
+// const oldHeading = document.querySelector('#task-title');
 // // Parent
 // const cardAction = document.querySelector('.card-action');
 
@@ -269,19 +273,19 @@ console.log(li);
 // const lis = document.querySelectorAll('li');
 // const list = document.querySelector('ul');
 
-// // Remove list item
+// // Remove specific list item
 // lis[0].remove();
 
 // // Remove child element
 // list.removeChild(lis[3]);
 
-// // CLASSES & ATTR
+// // CLASSES AND ATTRIBUTES
 // const firstLi = document.querySelector('li:first-child');
 // const link = firstLi.children[0];
 
 // let val;
 
-// // Classes
+// // Classses
 // val = link.className;
 // val = link.classList;
 // val = link.classList[0];
@@ -292,10 +296,10 @@ console.log(li);
 // // Attributes
 // val = link.getAttribute('href');
 // val = link.setAttribute('href', 'http://google.com');
-// link.setAttribute('title', 'Google');
+// val = link.hasAttribute('href');
 // val = link.hasAttribute('title');
+// link.setAttribute('title', 'Google');
 // link.removeAttribute('title');
-// val = link;
 
 // console.log(val);
 
