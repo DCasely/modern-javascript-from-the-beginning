@@ -147,98 +147,104 @@
 // 26. TRAVERSING THE DOM
 // ==========================================
 
-let val;
+// let val;
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item:first-child');
 
-val = listItem;
-val = list;
+// val = listItem;
+// val = list;
 
-// Get child nodes
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[1].nodeType;
-val = list.childNodes[3].nodeType;
+// // Get child nodes
+// val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[1].nodeType;
+// val = list.childNodes[3].nodeType;
 
-// 1 - ELEMENT
-// 2 - ATTRIBUTE (DEPRECATED)
-// 3 - TEXT NODE
-// 8 - COMMENT
-// 9 - DOCUMENT ITSELF
-// 10 - DOCTYPE
+// // 1 - ELEMENT
+// // 2 - ATTRIBUTE (DEPRECATED)
+// // 3 - TEXT NODE
+// // 8 - COMMENT
+// // 9 - DOCUMENT ITSELF
+// // 10 - DOCTYPE
 
-// Get children element nodes
-val = list.children;
-val = list.children[1];
-list.children[1].textContent = 'Hello';
+// // Get children element nodes
+// val = list.children;
+// val = list.children[1];
+// list.children[1].textContent = 'Hello';
 
-// Children of children
-val = list.children[3].children;
-list.children[3].children.id = 'test-link';
+// // Children of children
+// val = list.children[3].children;
+// list.children[3].children.id = 'test-link';
 
-// First child
-val = list.firstChild;
-val = list.firstElementChild;
+// // First child
+// val = list.firstChild;
+// val = list.firstElementChild;
 
-// Last child
-val = list.lastChild;
-val = list.lastElementChild;
+// // Last child
+// val = list.lastChild;
+// val = list.lastElementChild;
 
-// Count child elements
-val = list.childElementCount;
+// // Count child elements
+// val = list.childElementCount;
 
-// Get parent node
-val = listItem.parentNode;
-val = listItem.parentElement;
-val = listItem.parentElement.parentElement;
+// // Get parent node
+// val = listItem.parentNode;
+// val = listItem.parentElement;
+// val = listItem.parentElement.parentElement;
 
-// Get next sibling
-val = listItem.nextSibling;
-val = listItem.nextElementSibling;
-val = listItem.nextElementSibling.nextElementSibling;
+// // Get next sibling
+// val = listItem.nextSibling;
+// val = listItem.nextElementSibling;
+// val = listItem.nextElementSibling.nextElementSibling;
 
-// Get prev sibling
-val = listItem.previousSibling;
-val = listItem.previousElementSibling;
+// // Get prev sibling
+// val = listItem.previousSibling;
+// val = listItem.previousElementSibling;
 
-console.log(val);
+// console.log(val);
 
 // ==========================================
 // 27. Creating Elements
 // ==========================================
 
-// // Create element
-// const li = document.createElement('li');
+// Create element
 
-// // Add class
-// li.className = 'collection-item';
+const li = document.createElement('li');
 
-// // Add id
-// li.id = 'new-item';
+// Add class
+li.className = 'collection-item';
 
-// // Add attribute
-// li.setAttribute('title', 'New Item');
+// Add id
+li.id = 'new-item';
 
-// // Create text node and append
+// Add attribute
+li.setAttribute('title', 'New Item');
 
-// li.appendChild(document.createTextNode('Hello World'));
+// Create text node and append
+li.appendChild(document.createTextNode('This is the Text Node'));
 
-// // Create new link element
-// const link = document.createElement('a');
-// // Add classes
-// link.className = 'delete-item secondary-content';
-// // Add icon html
-// link.innerHTML = '<i class="fa fa-remove"></i>';
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
 
-// // Append link into li
-// li.appendChild(link);
+// Create new link element
+const link = document.createElement('a');
 
-// // Append li as child to ul
-// document.querySelector('ul.collection').appendChild(li);
+// Add href
+link.href = '#';
+// Add classes
+link.className = 'delete-item secondary-content';
+// Add icon html
+link.innerHTML = `<i class="fa fa-remove"></i>`;
 
-// console.log(li);
+// Append link into li
+li.appendChild(link);
+
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
 
 // ==========================================
 // 28. REMOVING & REPLACING ELEMENTS
