@@ -439,43 +439,43 @@
 // 32. EVENT BUBBLING & DELEGATION
 // ==========================================
 
-// EVENT BUBBLING
+// // EVENT BUBBLING
+// const cardTitle = document.querySelector('.card-title');
+// const cardContent = document.querySelector('.card-content');
+// const card = document.querySelector('.card');
+// const col = document.querySelector('.col');
 
-// document.querySelector('.card-title').addEventListener('click', function() {
-//   console.log('card title');
-// });
+// cardTitle.addEventListener('click', runEvent);
+// cardContent.addEventListener('click', runEvent2);
+// card.addEventListener('click', runEvent3);
+// col.addEventListener('click', runEvent4);
 
-// document.querySelector('.card-content').addEventListener('click', function() {
-//   console.log('card content');
-// });
-
-// document.querySelector('.card').addEventListener('click', function() {
-//   console.log('card');
-// });
-
-// document.querySelector('.col').addEventListener('click', function() {
-//   console.log('col');
-// });
-
-// EVENT DELEGATION
-
-// const delItem = document.querySelector('.delete-item');
-
-// delItem.addEventListener('click', deleteItem);
-
-// document.body.addEventListener('click', deleteItem);
-
-// function deleteItem(e) {
-//   // if (e.target.parentElement.className === 'delete-item secondary-content') {
-//   //   console.log(e.target);
-//   // }
-
-//   if (e.target.parentElement.classList.contains('delete-item')) {
-//     console.log(e.target);
-//     e.target.parentElement.parentElement.remove();
-//   }
+// function runEvent() {
+//   console.log('Card Title');
+// }
+// function runEvent2() {
+//   console.log('Card Content');
+// }
+// function runEvent3() {
+//   console.log('Card');
+// }
+// function runEvent4() {
+//   console.log('Col');
 // }
 
-// ==========================================
-// 33.
-// ==========================================
+// EVENT DELEGATION
+// const removeItem = document.querySelector('.delete-item');
+
+// removeItem.addEventListener('click', deleteItem);
+
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+  //   if (e.target.parentElement.className === 'delete-item secondary-content') {
+  //     console.log('Found');
+  //   }
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    console.log('Found');
+    e.target.parentElement.parentElement.remove();
+  }
+}
