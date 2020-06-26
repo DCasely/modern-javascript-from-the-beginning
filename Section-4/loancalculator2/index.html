@@ -16,7 +16,10 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Loan Calculator</title>
   </head>
 
   <body class="bg-dark">
@@ -72,9 +75,9 @@
             </form>
 
             <!-- LOADER HERE -->
-            <!-- <div id="loading">
+            <div id="loading">
               <img src="./images/loading.gif" alt="loading" />
-            </div> -->
+            </div>
 
             <!-- RESULTS -->
             <div id="results" class="pt-4">
@@ -117,6 +120,15 @@
                     disabled
                   />
                 </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Reset"
+                  id="reset"
+                  class="btn btn-warning btn-block"
+                />
               </div>
             </div>
           </div>

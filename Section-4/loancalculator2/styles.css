@@ -1,0 +1,5 @@
+/* INITIALLY WILL HIDE LOADING IMG AMD RESULTS */
+#loading,
+#results {
+  display: none;
+}
