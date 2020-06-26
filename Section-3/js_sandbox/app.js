@@ -503,26 +503,26 @@
 
 // console.log(name, age);
 
-document.querySelector('form').addEventListener('submit', function (e) {
-  const task = document.getElementById('task').value;
+// document.querySelector('form').addEventListener('submit', function (e) {
+//   const task = document.getElementById('task').value;
 
-  let tasks;
+//   let tasks;
 
-  if (localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
+//   if (localStorage.getItem('tasks') === null) {
+//     tasks = [];
+//   } else {
+//     tasks = JSON.parse(localStorage.getItem('tasks'));
+//   }
 
-  tasks.push(task);
+//   tasks.push(task);
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+//   localStorage.setItem('tasks', JSON.stringify(tasks));
 
-  e.preventDefault();
-});
+//   e.preventDefault();
+// });
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
+// const tasks = JSON.parse(localStorage.getItem('tasks'));
 
-console.log(tasks);
+// console.log(tasks);
 
-tasks.map((task) => console.log(task));
+// tasks.map((task) => console.log(task));
