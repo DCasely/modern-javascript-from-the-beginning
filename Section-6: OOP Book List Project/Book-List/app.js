@@ -57,9 +57,10 @@ UI.prototype.showAlert = function (message, className) {
     container.querySelector('.alert').remove();
   }, 3000);
 };
-// =========================================================
 
+// =========================================================
 // EVENT LISTENER FOR ADDING A BOOK
+// =========================================================
 const submitBtn = document.getElementById('book-form');
 
 submitBtn.addEventListener('submit', addBook);
