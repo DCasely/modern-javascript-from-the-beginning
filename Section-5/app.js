@@ -107,44 +107,44 @@
 // SECTION 46: PROTOTYPES EXPLAINED
 // ================================================
 
-// // Object.prototype
-// // Person.prototype
+// Object.prototype
+// Person.prototype
 
-// function Person(firstName, lastName, dob) {
-//   this.firstName = firstName;
-//   this.lastName = lastName;
-//   this.birthday = new Date(dob);
-// }
+function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.birthday = new Date(dob);
+}
 
-// // Calculate age
-// Person.prototype.calculateAge = function () {
-//   const diff = Date.now() - this.birthday.getTime();
-//   const ageDate = new Date(diff);
-//   return Math.abs(ageDate.getUTCFullYear() - 1970);
-// };
+// Calculate age
+Person.prototype.calculateAge = function () {
+  const diff = Date.now() - this.birthday.getTime();
+  const ageDate = new Date(diff);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+};
 
-// // Get full name
-// Person.prototype.getFullName = function () {
-//   return `${this.firstName} ${this.lastName}`;
-// };
+// Get full name
+Person.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
 
-// // Gets Married
-// Person.prototype.getsMarried = function (newLastName) {
-//   this.lastName = newLastName;
-// };
+// Gets Married
+Person.prototype.getsMarried = function (newLastName) {
+  this.lastName = newLastName;
+};
 
-// const john = new Person('John', 'Doe', '8-12-90');
-// const mary = new Person('Mary', 'Jane', 'March 5, 1988');
+const john = new Person('John', 'Doe', '8-12-90');
+const mary = new Person('Mary', 'Jane', 'March 5, 1988');
 
-// console.log(john);
-// console.log(mary);
+console.log(john);
+console.log(mary);
 
-// console.log(john.getFullName());
-// console.log(mary.getFullName());
+console.log(john.getFullName());
+console.log(mary.getFullName());
 
-// mary.getsMarried('Smith');
-// console.log(mary.getFullName());
+mary.getsMarried('Smith');
+console.log(mary.getFullName());
 
-// console.log(mary.hasOwnProperty('firstName'));
-// console.log(mary.hasOwnProperty('getFullName'));
-// console.log(mary.__proto__.hasOwnProperty('getFullName'));
+console.log(mary.hasOwnProperty('firstName'));
+console.log(mary.hasOwnProperty('getFullName'));
+console.log(mary.__proto__.hasOwnProperty('getFullName'));
