@@ -153,44 +153,77 @@
 // SECTION 47: PROTOTYPAL INHERITANCE
 // ================================================
 
-// Person Constructor
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-}
+// // Person Constructor
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
 
-// Greeting
-Person.prototype.greeting = function () {
-  return `Hello ${this.firstName} ${this.lastName}`;
-};
+// // Greeting
+// Person.prototype.greeting = function () {
+//   return `Hello ${this.firstName} ${this.lastName}`;
+// };
 
-const person1 = new Person('John', 'Doe');
+// const person1 = new Person('John', 'Doe');
 
-console.log(person1.greeting());
+// console.log(person1.greeting());
 
-// Customer constructor
-function Customer(firstName, lastName, phone, membership) {
-  Person.call(this, firstName, lastName);
+// // Customer constructor
+// function Customer(firstName, lastName, phone, membership) {
+//   Person.call(this, firstName, lastName);
 
-  this.phone = phone;
-  this.membership = membership;
-}
+//   this.phone = phone;
+//   this.membership = membership;
+// }
 
-// Inherit the Person prototype methods
-Customer.prototype = Object.create(Person.prototype);
+// // Inherit the Person prototype methods
+// Customer.prototype = Object.create(Person.prototype);
 
-// Make customer.prototype return Customer()
-Customer.prototype.constructor = Customer;
+// // Make customer.prototype return Customer()
+// Customer.prototype.constructor = Customer;
 
-// Create customer
+// // Create customer
 
-const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
+// const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
 
-console.log(customer1);
+// console.log(customer1);
 
-// Customer greeting
-Customer.prototype.greeting = function () {
-  return `Hello ${this.firstName} ${this.lastName}, welcome to The Casely Group`;
-};
+// // Customer greeting
+// Customer.prototype.greeting = function () {
+//   return `Hello ${this.firstName} ${this.lastName}, welcome to The Casely Group`;
+// };
 
-console.log(customer1.greeting());
+// console.log(customer1.greeting());
+
+// ================================================
+// SECTION 48: USING OBJECT.CREATE
+// ================================================
+
+// const personPrototypes = {
+//   greeting: function () {
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+//   },
+
+//   getsMarried: function (newLastName) {
+//     return (this.lastName = newLastName);
+//   },
+// };
+
+// const mary = Object.create(personPrototypes);
+// mary.firstName = 'Mary';
+// mary.lastName = 'Williams';
+// mary.age = 30;
+
+// mary.getsMarried('Thompson');
+
+// console.log(mary);
+// console.log(mary.greeting());
+
+// const davin = Object.create(personPrototypes, {
+//   firstName: { value: 'Davin' },
+//   lastName: { value: 'Casely' },
+//   age: { value: 30 },
+// });
+
+// console.log(davin);
+// console.log(davin.greeting());
