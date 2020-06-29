@@ -227,3 +227,45 @@
 
 // console.log(davin);
 // console.log(davin.greeting());
+
+// ================================================
+// SECTION 48: USING OBJECT.CREATE
+// ================================================
+
+class Person {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.bday = new Date(dob);
+  }
+
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+
+  calculateAge() {
+    const diff = Date.now() - this.bday.getTime();
+    const ageDate = new Date(diff);
+
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+
+  changeLastName(newLastName) {
+    this.lastName = newLastName;
+  }
+
+  static addNumbers(x, y) {
+    return x + y;
+  }
+}
+
+// INSTANTIATE - when you create an object using a class
+const son = new Person('Daven', 'Dick', '9-16-2016');
+son.changeLastName('Casely');
+
+console.log(son);
+console.log(son.greeting());
+console.log(son.calculateAge());
+
+// console.log(son.addNumbers(1, 2)); // ERROR BECAUSE IT'S A STATIC METHOD
+console.log(Person.addNumbers(1, 2));
