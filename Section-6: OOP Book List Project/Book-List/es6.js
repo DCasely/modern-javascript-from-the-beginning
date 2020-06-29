@@ -17,7 +17,7 @@ class UI {
     <td>${book.title}</td>
     <td>${book.author}</td>
     <td>${book.isbn}</td>
-    <td><a href='#' class= "delete">X</a></td>
+    <td><a href='#' class= "delete"><i class="fas fa-trash-alt"></i></a></td>
   `;
 
     list.appendChild(row);
@@ -31,7 +31,7 @@ class UI {
 
   deleteBook(target) {
     if (target.className === 'delete') {
-      target.parentElement.parentElement.remove();
+      target.parentElement.parentElement.parentElement.remove();
     }
   }
 
@@ -54,6 +54,55 @@ class UI {
     }, 3000);
   }
 }
+
+class Store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem('books') === null) {
+      let books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+
+    return books;
+  }
+
+  static displayBooks() {
+    const books = Store.getBooks();
+
+    books.map((book) => {
+      const ui = new UI();
+      // Add book to UI
+      ui.addBookToList(book);
+    });
+  }
+
+  static addBook(book) {
+    const books = Store.getBooks();
+
+    books.push(book);
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static removeBook(isbn) {
+    const books = Store.getBooks();
+
+    books.map((book, index) => {
+      if (book.isbn === isbn) {
+        books.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+// =========================================================
+// DOM LOAD EVENT
+// =========================================================
+
+document.addEventListener('DOMContentLoaded', Store.displayBooks);
 
 // =========================================================
 // EVENT LISTENER FOR ADDING A BOOK
@@ -84,6 +133,9 @@ function addBook(e) {
     // ADD BOOK TO LIST
     ui.addBookToList(book);
 
+    // ADD TO LOCAL STORAGE
+    Store.addBook(book);
+
     // SHOW SUCCESS
     ui.showAlert('Book Has Been Added', 'success');
 
@@ -107,6 +159,11 @@ function deleteBook(e) {
 
   // DELETE BOOK ROW
   ui.deleteBook(e.target);
+
+  // Remove from LS
+  Store.removeBook(
+    e.target.parentElement.parentElement.previousElementSibling.textContent
+  );
 
   // SHOW ALERT
   ui.showAlert('Book Successfully Removed', 'success');
