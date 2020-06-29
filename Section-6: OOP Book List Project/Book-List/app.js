@@ -31,6 +31,25 @@ UI.prototype.clearFields = function () {
   document.getElementById('isbn').value = '';
 };
 
+// SHOW ALERT
+UI.prototype.showAlert = function (message, className) {
+  // Create div
+  const div = document.createElement('div');
+  // Add classes
+  div.className = `alert ${className}`;
+  // Add text
+  div.appendChild(document.createTextNode(message));
+  // Get parent
+  const container = document.querySelector('.container');
+  const form = document.querySelector('#book-form');
+  // Insert alert
+  container.insertBefore(div, form);
+
+  // Timeout after 3 secs
+  setTimeout(function () {
+    container.querySelector('.alert').remove();
+  }, 3000);
+};
 // =========================================================
 
 // EVENT LISTENERS
@@ -50,11 +69,20 @@ function addBook(e) {
   // INSTANTIATE UI
   const ui = new UI();
 
-  // ADD BOOK TO LIST
-  ui.addBookToList(book);
+  // VALIDATION
+  if (title === '' || author === '' || isbn === '') {
+    // ERROR ALERT
+    ui.showAlert('Please fill in all fields', 'error');
+  } else {
+    // ADD BOOK TO LIST
+    ui.addBookToList(book);
 
-  // Clear fields
-  ui.clearFields();
+    // SHOW SUCCESS
+    ui.showAlert('Book Has Been Added', 'success');
+
+    // Clear fields
+    ui.clearFields();
+  }
 
   e.preventDefault();
 }
