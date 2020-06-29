@@ -229,43 +229,76 @@
 // console.log(davin.greeting());
 
 // ================================================
-// SECTION 48: USING OBJECT.CREATE
+// SECTION 49: ES6 CLASSES
+// ================================================
+
+// class Person {
+//   constructor(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.bday = new Date(dob);
+//   }
+
+//   greeting() {
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+//   }
+
+//   calculateAge() {
+//     const diff = Date.now() - this.bday.getTime();
+//     const ageDate = new Date(diff);
+
+//     return Math.abs(ageDate.getUTCFullYear() - 1970);
+//   }
+
+//   changeLastName(newLastName) {
+//     this.lastName = newLastName;
+//   }
+
+//   static addNumbers(x, y) {
+//     return x + y;
+//   }
+// }
+
+// // INSTANTIATE - when you create an object using a class
+// const son = new Person('Daven', 'Dick', '9-16-2016');
+// son.changeLastName('Casely');
+
+// console.log(son);
+// console.log(son.greeting());
+// console.log(son.calculateAge());
+
+// // console.log(son.addNumbers(1, 2)); // ERROR BECAUSE IT'S A STATIC METHOD
+// console.log(Person.addNumbers(1, 2));
+
+// ================================================
+// SECTION 50: SUB CLASSES
 // ================================================
 
 class Person {
-  constructor(firstName, lastName, dob) {
+  constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.bday = new Date(dob);
   }
 
   greeting() {
     return `Hello there ${this.firstName} ${this.lastName}`;
   }
+}
 
-  calculateAge() {
-    const diff = Date.now() - this.bday.getTime();
-    const ageDate = new Date(diff);
+class Customer extends Person {
+  constructor(firstName, lastName, phone, membership) {
+    super(firstName, lastName);
 
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+    this.phone = phone;
+    this.membership = membership;
   }
 
-  changeLastName(newLastName) {
-    this.lastName = newLastName;
-  }
-
-  static addNumbers(x, y) {
-    return x + y;
+  static getMembershipCost() {
+    return 500;
   }
 }
 
-// INSTANTIATE - when you create an object using a class
-const son = new Person('Daven', 'Dick', '9-16-2016');
-son.changeLastName('Casely');
-
-console.log(son);
-console.log(son.greeting());
-console.log(son.calculateAge());
-
-// console.log(son.addNumbers(1, 2)); // ERROR BECAUSE IT'S A STATIC METHOD
-console.log(Person.addNumbers(1, 2));
+const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
+console.log(john);
+console.log(john.greeting());
+console.log(Customer.getMembershipCost());
